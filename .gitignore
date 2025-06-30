@@ -139,4 +139,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-backend/data/*.json
+backend/data/
