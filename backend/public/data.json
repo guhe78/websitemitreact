@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "data": {
+    "id": 123,
+    "name": "Beispielname",
+    "email": "beispiel@example.com",
+    "additionalInfo": {
+      "age": 30,
+      "city": "Berlin"
+    }
+  },
+  "message": "Daten erfolgreich abgerufen"
+}
