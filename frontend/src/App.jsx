@@ -1,27 +1,36 @@
-import { useState } from "react";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
-import Home from "./pages/Home.jsx";
-import NoPage from "./pages/NoPage.jsx";
-import Projects from "./pages/Projects.jsx";
+import { Container } from "react-bootstrap";
+
+const Home = lazy(() => import("./pages/Home.jsx"));
+const About = lazy(() => import("./pages/About.jsx"));
+const Projects = lazy(() => import("./pages/Projects.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
+const Impressum = lazy(() => import("./pages/Impressum.jsx"));
+const NoPage = lazy(() => import("./pages/NoPage.jsx"));
+const Header = lazy(() => import("./components/parts/Header.jsx"));
+const Footer = lazy(() => import("./components/parts/Footer.jsx"));
 
 function App() {
   return (
-    <>
+    <Container>
       <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
+      <div className="content">
+        <BrowserRouter>
+          <Suspense fallback={<div>loading..</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="*" element={<NoPage />} />
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+      </div>
       <Footer />
-    </>
+    </Container>
   );
 }
 

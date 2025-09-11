@@ -1,15 +1,13 @@
-import React from "react";
+import Button from "./Button.comp.jsx";
+import "../styles/Navbar.style.scss";
 
-function Header() {
+export default function Navbar() {
   return (
-    <div>
-      <div className="text-center">
-        <img src="./img/headerbildfia.png" className="img-fluid" alt="..." />
-      </div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <>
+      <nav className="navbar navbar-expand-md bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            Home
+            FIAE
           </a>
           <button
             className="navbar-toggler"
@@ -25,26 +23,32 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="/about">
-                  Über mich
+                  About Me
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/projects">
-                  Projekte
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/contact">
-                  Kontakt
+                  Projects
                 </a>
               </li>
             </ul>
           </div>
+          <div>
+            <Button title="Kontakt" className="nav-buttons" link="/contact" />
+            <Button
+              title="GitHub"
+              className="nav-buttons"
+              link="https://github.com/guhe78/"
+            />
+          </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 }
-
-export default Header;

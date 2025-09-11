@@ -1,0 +1,14 @@
+.nav-buttons {
+    background-color: lightcoral;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+        color: darkgray;
+        text-decoration: none;
+    }
+}

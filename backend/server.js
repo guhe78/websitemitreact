@@ -2,9 +2,9 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import fs from "fs";
-import path from "path"; // Importiere das path-Modul
+import path from "path";
 import { fileURLToPath } from "url";
-import * as dotenv from "dotenv";
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -38,7 +38,7 @@ const loadProjects = (filePath) => {
 
 app.get("/projects", async (req, res) => {
   try {
-    const filePath = path.join(__dirname, "./public/projects.json");
+    const filePath = path.join(__dirname, "./data/projects.json");
     const data = await loadProjects(filePath);
     res.json(data);
   } catch (err) {

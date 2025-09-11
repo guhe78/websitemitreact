@@ -1,14 +1,15 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import "../styles/Cards.style.scss";
 
-function Cards(props) {
+function Cards({ imgUrl, title, text, linkName }) {
   return (
     <Card className="projectCard mx-auto">
-      <Card.Img variant="top" src={props.imgUrl} />
+      <Card.Img variant="top" src={imgUrl} />
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text>{props.text}</Card.Text>
-        <a href={props.linkName} target="blank">
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{text}</Card.Text>
+        <a href={linkName} target="blank">
           <Button variant="primary">Click</Button>
         </a>
       </Card.Body>
