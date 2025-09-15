@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { fetchProjects } from "../apiServices";
 
-import Cards from "../components/parts/Cards.comp.jsx";
+import Card from "../components/parts/Card.comp.jsx";
+import "../components/styles/ProjekteCards.style.scss";
 
 function Projects() {
   const [projekte, setProjekte] = useState(null);
@@ -31,10 +32,13 @@ function Projects() {
   return (
     <div>
       <h1>Projekte</h1>
-      <div className="row">
+      <div className="row d-flex justify-content-center">
         {projekte.map((projekt) => (
-          <div className="col-xs-1 col-md-6 col-lg-4 mb-3" key={projekt.id}>
-            <Cards
+          <div
+            className="d-flex justify-content-center col-xs-1 col-md-6 col-lg-4 mb-3"
+            key={projekt.id}
+          >
+            <Card
               key={projekt.id}
               title={projekt.name}
               text={projekt.description}

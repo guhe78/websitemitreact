@@ -1,4 +1,25 @@
-.projectCard {
+@import "../../style.scss";
+
+.project-card {
     width: 18rem;
     min-height: 15rem;
+
+    .custom-button {
+        background-color: $secondary;
+        border: none;
+        border-radius: 10px;
+        color: $font-color-light;
+        padding: 0.3rem 0.7rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($secondary, 10%);
+            color: lighten($color: #888484, $amount: 0)
+        }
+    }
 }

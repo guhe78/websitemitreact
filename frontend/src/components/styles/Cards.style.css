@@ -1,3 +1,4 @@
+@import url("../../style.scss");
 .projectCard {
   width: 18rem;
   min-height: 15rem;

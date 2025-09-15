@@ -1,5 +1,5 @@
 import Navbar from "./Navbar.comp.jsx";
-import "../styles/Header.style.css";
+import "../styles/Header.style.scss";
 
 function Header() {
   return (

@@ -1,0 +1,12 @@
+@import "bootstrap/scss/bootstrap";
+// src/styles/_bootstrap-custom.scss
+// Überschreiben Sie die Variablen
+$primary: #FF5714;
+$secondary: #E4FF1A;
+$background-color-dark: #583b3b;
+$background-color-light: #F5F4F4;
+$font-color-dark: #51E5FF;
+$font-color-light: #0F0A0A;
+// Importieren Sie den Rest von Bootstrap
+@import "bootstrap/scss/bootstrap";
+// Zusätzliche benutzerdefinierte Stile können hier hinzugefügt werden

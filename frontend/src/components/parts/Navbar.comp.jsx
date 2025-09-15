@@ -1,14 +1,15 @@
-import Button from "./Button.comp.jsx";
+import { LinkBtn } from "./LinkBtn.comp.jsx";
+import { ToggleBtn } from "./ToggleBtn.comp.jsx";
+import { useTheme } from "../../contexts/Theme.context.jsx";
 import "../styles/Navbar.style.scss";
 
 export default function Navbar() {
+  const { isDark, toggleTheme } = useTheme();
+
   return (
     <>
-      <nav className="navbar navbar-expand-md bg-body-tertiary">
+      <nav className={`navbar navbar-expand-md ${isDark ? "dark" : "light"}`}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            FIAE
-          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -40,11 +41,16 @@ export default function Navbar() {
             </ul>
           </div>
           <div>
-            <Button title="Kontakt" className="nav-buttons" link="/contact" />
-            <Button
+            <LinkBtn title="Kontakt" className="nav-buttons" link="/contact" />
+            <LinkBtn
               title="GitHub"
               className="nav-buttons"
               link="https://github.com/guhe78/"
+            />
+            <ToggleBtn
+              title={`${isDark ? "Light" : "Dark"}`}
+              className={`${isDark ? "light" : "dark"}`}
+              toggleHandler={toggleTheme}
             />
           </div>
         </div>
