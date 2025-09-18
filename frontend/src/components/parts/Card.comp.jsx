@@ -10,7 +10,9 @@ function Card({ imgUrl, title, text, linkName }) {
       <div className="card-header">{title}</div>
       <div className="card-body">
         <p className="card-text">{text}</p>
-        <LinkBtn title="GitHub" className="custom-button" link={linkName} />
+        <div className="link-btn">
+          <LinkBtn title="GitHub" className="custom-button" link={linkName} />
+        </div>
       </div>
     </div>
   );

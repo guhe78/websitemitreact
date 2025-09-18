@@ -16,3 +16,13 @@ export const fetchProjects = async () => {
     throw error;
   }
 };
+
+export const fetchAbout = async () => {
+  try {
+    const response = await apiClient.get("/about");
+    return response.data;
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Daten:", error);
+    throw error;
+  }
+};

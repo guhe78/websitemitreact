@@ -8,7 +8,11 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar navbar-expand-md ${isDark ? "dark" : "light"}`}>
+      <nav
+        className={`navbar navbar-expand-md ${
+          isDark ? "navbar-dark" : "navbar-light"
+        }`}
+      >
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -30,22 +34,25 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/about">
-                  About Me
+                  Über mich
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/projects">
-                  Projects
+                  Projekte
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <LinkBtn title="Kontakt" className="nav-buttons" link="/contact" />
+            <a className="nav-buttons" href="/contact">
+              Kontakt
+            </a>
             <LinkBtn
               title="GitHub"
               className="nav-buttons"
               link="https://github.com/guhe78/"
+              target="_blank"
             />
             <ToggleBtn
               title={`${isDark ? "Light" : "Dark"}`}

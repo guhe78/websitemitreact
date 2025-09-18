@@ -20,7 +20,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const loadProjects = (filePath) => {
+const loadData = (filePath) => {
   return new Promise((resolve, reject) => {
     fs.readFile(filePath, "utf8", (err, data) => {
       if (err) {
@@ -39,10 +39,21 @@ const loadProjects = (filePath) => {
 app.get("/projects", async (req, res) => {
   try {
     const filePath = path.join(__dirname, "./data/projects.json");
-    const data = await loadProjects(filePath);
+    const data = await loadData(filePath);
     res.json(data);
   } catch (err) {
     console.error("Fehler beim Laden der Projektdaten:", err);
+    res.status(500).send("Fehler beim Lesen oder Parsen der Datei");
+  }
+});
+
+app.get("/about", async (req, res) => {
+  try {
+    const filePath = path.join(__dirname, "./data/about.json");
+    const data = await loadData(filePath);
+    res.json(data);
+  } catch (err) {
+    console.error("Fehler beim Laden der About-Daten:", err);
     res.status(500).send("Fehler beim Lesen oder Parsen der Datei");
   }
 });

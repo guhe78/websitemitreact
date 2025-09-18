@@ -1,5 +1,3 @@
-@import "../../style.scss";
-
 .nav-buttons {
     background-color: lightcoral;
     color: white;
@@ -12,5 +10,42 @@
     &:hover {
         color: darkgray;
         text-decoration: none;
+    }
+}
+
+.navbar {
+    background-color: var(--navbar-background);
+    color: var(--navbar-color);
+
+    .nav-link {
+        color: var(--navbar-color);
+
+        &:hover {
+            color: var(--navbar-hover-color);
+        }
+
+        &.active {
+            color: var(--navbar-active-color);
+        }
+
+        &.disabled {
+            color: var(--navbar-disabled-color);
+        }
+    }
+
+    .navbar-brand {
+        color: var(--navbar-brand-color);
+
+        &:hover {
+            color: var(--navbar-brand-hover-color);
+        }
+    }
+
+    .navbar-toggler {
+        border-color: var(--navbar-toggler-border-color);
+
+        .navbar-toggler-icon {
+            background-image: var(--navbar-toggler-icon-bg);
+        }
     }
 }

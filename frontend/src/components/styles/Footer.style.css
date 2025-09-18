@@ -1,3 +1,4 @@
 .footer {
-  background-color: rgb(164, 252, 255);
+  background-color: var(--header-background);
+  color: var(--header-text);
 }/*# sourceMappingURL=Footer.style.css.map */

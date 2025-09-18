@@ -1,7 +1,6 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import { useTheme } from "./contexts/Theme.context.jsx";
 
 const Home = lazy(() => import("./pages/Home.jsx"));
 const About = lazy(() => import("./pages/About.jsx"));

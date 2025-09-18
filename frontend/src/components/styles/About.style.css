@@ -1,0 +1,15 @@
+.carousel-control-prev,
+.carousel-control-next {
+  top: 0.5rem;
+  bottom: auto;
+}
+
+.carousel-indicators {
+  top: 2rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=About.style.css.map */

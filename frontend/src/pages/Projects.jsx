@@ -5,27 +5,28 @@ import Card from "../components/parts/Card.comp.jsx";
 import "../components/styles/ProjekteCards.style.scss";
 
 function Projects() {
-  const [projekte, setProjekte] = useState(null);
-  const [fehler, setFehler] = useState(null);
+  const [projects, setProjects] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const loadProjects = async () => {
       try {
         const data = await fetchProjects();
-        setProjekte(data.projects);
+        setProjects(data.projects);
       } catch (error) {
-        setFehler(error.message);
+        setError(error.message);
       }
     };
 
     loadProjects();
   }, []);
+  console.log(projects);
 
-  if (fehler) {
-    return <div>Fehler: {fehler}</div>;
+  if (error) {
+    return <div>Fehler: {error}</div>;
   }
 
-  if (!projekte) {
+  if (!projects) {
     return <div>Lade Daten...</div>;
   }
 
@@ -33,16 +34,16 @@ function Projects() {
     <div>
       <h1>Projekte</h1>
       <div className="row d-flex justify-content-center">
-        {projekte.map((projekt) => (
+        {projects.map((project) => (
           <div
             className="d-flex justify-content-center col-xs-1 col-md-6 col-lg-4 mb-3"
-            key={projekt.id}
+            key={project.id}
           >
             <Card
-              key={projekt.id}
-              title={projekt.name}
-              text={projekt.description}
-              linkName={projekt.url}
+              key={project.id}
+              title={project.name}
+              text={project.description}
+              linkName={project.url}
             />
           </div>
         ))}

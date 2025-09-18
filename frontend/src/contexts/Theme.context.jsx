@@ -7,18 +7,18 @@ export const useTheme = () => {
 };
 
 export const ThemeContextProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    const savedMode = localStorage.getItem("isDark");
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
 
   useEffect(() => {
     if (isDark) {
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-      localStorage.setItem("isDark", JSON.stringify(true));
+      document.documentElement.setAttribute("data-theme", "dark");
     } else {
-      document.body.classList.remove("dark");
-      document.body.classList.add("light");
-      localStorage.setItem("isDark", JSON.stringify(false));
+      document.documentElement.setAttribute("data-theme", "light");
     }
+    localStorage.setItem("isDark", JSON.stringify(isDark));
   }, [isDark]);
 
   const toggleTheme = () => {
