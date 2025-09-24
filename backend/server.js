@@ -1,5 +1,4 @@
 import express from "express";
-import bodyParser from "body-parser";
 import cors from "cors";
 import fs from "fs";
 import path from "path";
@@ -18,7 +17,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 const loadData = (filePath) => {
   return new Promise((resolve, reject) => {
@@ -36,24 +35,21 @@ const loadData = (filePath) => {
   });
 };
 
-app.get("/projects", async (req, res) => {
-  try {
-    const filePath = path.join(__dirname, "./data/projects.json");
-    const data = await loadData(filePath);
-    res.json(data);
-  } catch (err) {
-    console.error("Fehler beim Laden der Projektdaten:", err);
-    res.status(500).send("Fehler beim Lesen oder Parsen der Datei");
-  }
-});
+const dataFiles = {
+  projects: "projects.json",
+  about: "about.json",
+};
 
-app.get("/about", async (req, res) => {
+app.get("/:type", async (req, res) => {
+  const { type } = req.params;
+  if (!dataFiles[type]) return res.status(404).send("Nicht gefunden");
+
   try {
-    const filePath = path.join(__dirname, "./data/about.json");
+    const filePath = path.join(__dirname, "data", dataFiles[type]);
     const data = await loadData(filePath);
     res.json(data);
   } catch (err) {
-    console.error("Fehler beim Laden der About-Daten:", err);
+    console.error("Fehler beim Laden der Daten:", err);
     res.status(500).send("Fehler beim Lesen oder Parsen der Datei");
   }
 });
