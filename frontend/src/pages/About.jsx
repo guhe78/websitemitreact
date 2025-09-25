@@ -5,8 +5,8 @@ import "../components/styles/About.style.scss";
 import "../components/styles/ProjekteCards.style.scss";
 
 export default function About() {
-  const [abouts, setAbouts] = useState(null);
-  const [error, setError] = useState(null);
+  const [abouts, setAbouts] = useState();
+  const [error, setError] = useState();
   const { isDark } = useTheme();
 
   useEffect(() => {
@@ -64,9 +64,11 @@ export default function About() {
                       {Object.entries(about.details).map(([key, values]) => (
                         <div key={key} className="mt-3">
                           <p className="font-semibold">{key}:</p>
-                          <div className="list-disc list-inside">
+                          <div className="list-disc list-inside w-100 d-flex flex-row justify-content-center flex-wrap">
                             {values.map((item, index) => (
-                              <div key={index}>{item}</div>
+                              <div key={index} className="about-item">
+                                {item}
+                              </div>
                             ))}
                           </div>
                         </div>

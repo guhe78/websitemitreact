@@ -20,7 +20,6 @@ function Projects() {
 
     loadProjects();
   }, []);
-  console.log(projects);
 
   if (error) {
     return <div>Fehler: {error}</div>;
