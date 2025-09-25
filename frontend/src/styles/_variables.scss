@@ -46,7 +46,6 @@ $dark-footer-text: #ffffff;
 
 //
 // Navbar
-// (Angelehnt an Bootstrap, aber in Light/Dark getrennt)
 $navbar-light-color: rgba(0, 0, 0, 0.65);
 $navbar-light-background: #64f58d;
 $navbar-light-hover-color: #9dfff9;
@@ -54,7 +53,7 @@ $navbar-light-active-color: rgba(0, 0, 0, 1);
 $navbar-light-disabled-color: rgba(0, 0, 0, 0.3);
 $navbar-light-icon-color: rgba(33, 37, 41, 0.75);
 $navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(33,37,41,0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-$navbar-light-toggler-border-color: rgba(0, 0, 0, 0.15);
+$navbar-light-toggler-border-color: rgba(0, 0, 0, 0.6);
 $navbar-light-brand-color: $navbar-light-active-color;
 $navbar-light-brand-hover-color: $navbar-light-active-color;
 
@@ -65,7 +64,7 @@ $navbar-dark-active-color: #ffffff;
 $navbar-dark-disabled-color: rgba(255, 255, 255, 0.25);
 $navbar-dark-icon-color: $navbar-dark-color;
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255,255,255,0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-$navbar-dark-toggler-border-color: rgba(255, 255, 255, 0.1);
+$navbar-dark-toggler-border-color: rgba(255, 255, 255, 0.6);
 $navbar-dark-brand-color: $navbar-dark-active-color;
 $navbar-dark-brand-hover-color: $navbar-dark-active-color;
 

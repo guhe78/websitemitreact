@@ -25,6 +25,7 @@
   --navbar-active-color: #{vars.$navbar-light-active-color};
   --navbar-icon-color: #{vars.$navbar-light-icon-color};
   --navbar-toggler-icon-bg: #{vars.$navbar-light-toggler-icon-bg};
+  --navbar-toggler-icon-color: #{vars.$navbar-light-icon-color};
   --navbar-toggler-border-color: #{vars.$navbar-light-toggler-border-color};
 }
 
@@ -53,5 +54,6 @@
   --navbar-active-color: #{vars.$navbar-dark-active-color};
   --navbar-icon-color: #{vars.$navbar-dark-icon-color};
   --navbar-toggler-icon-bg: #{vars.$navbar-dark-toggler-icon-bg};
+  --navbar-toggler-icon-color: #{vars.$navbar-dark-icon-color};
   --navbar-toggler-border-color: #{vars.$navbar-dark-toggler-border-color};
 }
