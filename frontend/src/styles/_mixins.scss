@@ -1,123 +1,57 @@
-// src/styles/_mixins.scss
+@use "./variables" as vars;
 
+// Light Mode
 @mixin light-theme {
-    // Global
-    --background-color: #{$light-background};
-    --text-color: #{$light-text};
+  --background-color: #{vars.$light-background};
+  --text-color: #{vars.$light-text};
 
-    // Card
-    --card-background: #{$light-card-background};
-    --card-text: #{$light-card-text};
+  --card-background: #{vars.$light-card-background};
+  --card-text: #{vars.$light-card-text};
 
-    // Button
-    --button-background: #{$light-button-background};
-    --button-text: #{$light-button-text};
+  --button-background: #{vars.$light-button-background};
+  --button-hover-background: #{vars.$light-button-hover-background};
+  --button-text: #{vars.$light-button-text};
+  --button-hover-text: #{vars.$light-button-hover-text};
 
-    // Header & Footer
-    --header-background: #{$light-header-background};
-    --header-text: #{$light-header-text};
-    --footer-background: #{$light-footer-background};
-    --footer-text: #{$light-footer-text};
+  --header-background: #{vars.$light-header-background};
+  --header-text: #{vars.$light-header-text};
 
-    // Navbar
-    --navbar-color: #{$navbar-light-color};
-    --navbar-background: #{$navbar-light-background};
-    --navbar-hover-color: #{$navbar-light-hover-color};
-    --navbar-active-color: #{$navbar-light-active-color};
-    --navbar-disabled-color: #{$navbar-light-disabled-color};
-    --navbar-icon-color: #{$navbar-light-icon-color};
-    --navbar-toggler-icon-bg: #{$navbar-light-toggler-icon-bg};
-    --navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
-    --navbar-brand-color: #{$navbar-light-brand-color};
-    --navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
+  --footer-background: #{vars.$light-footer-background};
+  --footer-text: #{vars.$light-footer-text};
 
-    // Carousel
-    --carousel-control-color: #{$carousel-control-color};
-    --carousel-control-width: #{$carousel-control-width};
-    --carousel-control-opacity: #{$carousel-control-opacity};
-    --carousel-control-hover-opacity: #{$carousel-control-hover-opacity};
-    --carousel-control-transition: #{$carousel-control-transition};
-    --carousel-control-icon-filter: #{$carousel-control-icon-filter};
-
-    --carousel-indicator-width: #{$carousel-indicator-width};
-    --carousel-indicator-height: #{$carousel-indicator-height};
-    --carousel-indicator-hit-area-height: #{$carousel-indicator-hit-area-height};
-    --carousel-indicator-spacer: #{$carousel-indicator-spacer};
-    --carousel-indicator-opacity: #{$carousel-indicator-opacity};
-    --carousel-indicator-active-bg: #{$carousel-indicator-active-bg};
-    --carousel-indicator-active-opacity: #{$carousel-indicator-active-opacity};
-    --carousel-indicator-transition: #{$carousel-indicator-transition};
-
-    --carousel-caption-width: #{$carousel-caption-width};
-    --carousel-caption-color: #{$carousel-caption-color};
-    --carousel-caption-padding-y: #{$carousel-caption-padding-y};
-    --carousel-caption-spacer: #{$carousel-caption-spacer};
-
-    --carousel-control-icon-width: #{$carousel-control-icon-width};
-    --carousel-control-prev-icon-bg: #{$carousel-control-prev-icon-bg};
-    --carousel-control-next-icon-bg: #{$carousel-control-next-icon-bg};
-
-    --carousel-transition-duration: #{$carousel-transition-duration};
-    --carousel-transition: #{$carousel-transition};
+  --navbar-color: #{vars.$navbar-light-color};
+  --navbar-background: #{vars.$navbar-light-background};
+  --navbar-hover-color: #{vars.$navbar-light-hover-color};
+  --navbar-active-color: #{vars.$navbar-light-active-color};
+  --navbar-icon-color: #{vars.$navbar-light-icon-color};
+  --navbar-toggler-icon-bg: #{vars.$navbar-light-toggler-icon-bg};
+  --navbar-toggler-border-color: #{vars.$navbar-light-toggler-border-color};
 }
 
+// Dark Mode
 @mixin dark-theme {
-    // Global
-    --background-color: #{$dark-background};
-    --text-color: #{$dark-text};
+  --background-color: #{vars.$dark-background};
+  --text-color: #{vars.$dark-text};
 
-    // Card
-    --card-background: #{$dark-card-background};
-    --card-text: #{$dark-card-text};
+  --card-background: #{vars.$dark-card-background};
+  --card-text: #{vars.$dark-card-text};
 
-    // Button
-    --button-background: #{$dark-button-background};
-    --button-text: #{$dark-button-text};
+  --button-background: #{vars.$dark-button-background};
+  --button-hover-background: #{vars.$dark-button-hover-background};
+  --button-text: #{vars.$dark-button-text};
+  --button-hover-text: #{vars.$dark-button-hover-text};
 
-    // Header & Footer
-    --header-background: #{$dark-header-background};
-    --header-text: #{$dark-header-text};
-    --footer-background: #{$dark-footer-background};
-    --footer-text: #{$dark-footer-text};
+  --header-background: #{vars.$dark-header-background};
+  --header-text: #{vars.$dark-header-text};
 
-    // Navbar
-    --navbar-color: #{$navbar-dark-color};
-    --navbar-background: #{$navbar-dark-background};
-    --navbar-hover-color: #{$navbar-dark-hover-color};
-    --navbar-active-color: #{$navbar-dark-active-color};
-    --navbar-disabled-color: #{$navbar-dark-disabled-color};
-    --navbar-icon-color: #{$navbar-dark-icon-color};
-    --navbar-toggler-icon-bg: #{$navbar-dark-toggler-icon-bg};
-    --navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
-    --navbar-brand-color: #{$navbar-dark-brand-color};
-    --navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
+  --footer-background: #{vars.$dark-footer-background};
+  --footer-text: #{vars.$dark-footer-text};
 
-    // Carousel
-    --carousel-control-color: #{$carousel-control-color};
-    --carousel-control-width: #{$carousel-control-width};
-    --carousel-control-opacity: #{$carousel-control-opacity};
-    --carousel-control-hover-opacity: #{$carousel-control-hover-opacity};
-    --carousel-control-transition: #{$carousel-control-transition};
-    --carousel-control-icon-filter: #{$carousel-control-icon-filter};
-
-    --carousel-indicator-width: #{$carousel-indicator-width};
-    --carousel-indicator-height: #{$carousel-indicator-height};
-    --carousel-indicator-hit-area-height: #{$carousel-indicator-hit-area-height};
-    --carousel-indicator-spacer: #{$carousel-indicator-spacer};
-    --carousel-indicator-opacity: #{$carousel-indicator-opacity};
-    --carousel-indicator-active-bg: #{$carousel-indicator-active-bg};
-    --carousel-indicator-active-opacity: #{$carousel-indicator-active-opacity};
-    --carousel-indicator-transition: #{$carousel-indicator-transition};
-
-    --carousel-caption-width: #{$carousel-caption-width};
-    --carousel-caption-color: #{$carousel-caption-color};
-    --carousel-caption-padding-y: #{$carousel-caption-padding-y};
-    --carousel-caption-spacer: #{$carousel-caption-spacer};
-
-    --carousel-control-icon-width: #{$carousel-control-icon-width};
-    --carousel-control-prev-icon-bg: #{$carousel-control-prev-icon-bg};
-    --carousel-control-next-icon-bg: #{$carousel-control-next-icon-bg};
-
-    --carousel-transition-duration: #{$carousel-transition-duration};
-    --carousel-transition: #{$carousel-transition};
+  --navbar-color: #{vars.$navbar-dark-color};
+  --navbar-background: #{vars.$navbar-dark-background};
+  --navbar-hover-color: #{vars.$navbar-dark-hover-color};
+  --navbar-active-color: #{vars.$navbar-dark-active-color};
+  --navbar-icon-color: #{vars.$navbar-dark-icon-color};
+  --navbar-toggler-icon-bg: #{vars.$navbar-dark-toggler-icon-bg};
+  --navbar-toggler-border-color: #{vars.$navbar-dark-toggler-border-color};
 }

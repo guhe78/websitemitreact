@@ -1,15 +1,26 @@
 .carousel-control-prev,
 .carousel-control-next {
-  top: 0.5rem;
+  top: 0.4rem;
   bottom: auto;
 }
 
 .carousel-indicators {
-  top: 2rem;
+  top: 1.5rem;
 }
 
-.card-header {
+.about-card .card-header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(156, 156, 156);
+  color: var(--header-text);
+}
+.about-card .card-body {
+  padding: 0;
+  background-color: var(--card-background);
+  color: var(--card-text);
+}
+.about-card .card-text {
+  padding: 5rem;
+  text-align: center;
 }/*# sourceMappingURL=About.style.css.map */

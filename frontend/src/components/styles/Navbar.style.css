@@ -1,13 +1,53 @@
-.nav-buttons {
-  background-color: lightcoral;
-  color: white;
+.navbar {
+  background-color: var(--navbar-background);
+  color: var(--navbar-color);
+  border-radius: 0 0 8px 8px;
+}
+.navbar .nav-link {
+  color: var(--navbar-color);
+}
+.navbar .nav-link:hover {
+  color: var(--navbar-hover-color);
+}
+.navbar .nav-link.active {
+  color: var(--navbar-active-color);
+}
+.navbar .nav-link.disabled {
+  color: var(--navbar-disabled-color);
+}
+.navbar .navbar-brand {
+  color: var(--navbar-brand-color);
+}
+.navbar .navbar-brand:hover {
+  color: var(--navbar-brand-hover-color);
+}
+.navbar .navbar-toggler {
+  border-color: var(--navbar-toggler-border-color);
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: var(--navbar-toggler-icon-bg);
+}
+.navbar .nav-buttons-group-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar .nav-buttons-group-right .nav-buttons {
+  background-color: var(--button-background);
+  color: var(--button-text);
   border: 1px solid white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
 }
-.nav-buttons:hover {
+.navbar .nav-buttons-group-right .nav-buttons:hover {
   color: darkgray;
   text-decoration: none;
+}
+.navbar .nav-buttons-group-right .icon-sun {
+  color: yellow;
+}
+.navbar .nav-buttons-group-right .icon-moon {
+  color: darkblue;
 }/*# sourceMappingURL=Navbar.style.css.map */

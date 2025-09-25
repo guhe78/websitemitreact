@@ -1,51 +1,66 @@
-.nav-buttons {
-    background-color: lightcoral;
-    color: white;
-    border: 1px solid white;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-
-    &:hover {
-        color: darkgray;
-        text-decoration: none;
-    }
-}
-
 .navbar {
-    background-color: var(--navbar-background);
+  background-color: var(--navbar-background);
+  color: var(--navbar-color);
+  border-radius: 0 0 8px 8px;
+
+  .nav-link {
     color: var(--navbar-color);
 
-    .nav-link {
-        color: var(--navbar-color);
-
-        &:hover {
-            color: var(--navbar-hover-color);
-        }
-
-        &.active {
-            color: var(--navbar-active-color);
-        }
-
-        &.disabled {
-            color: var(--navbar-disabled-color);
-        }
+    &:hover {
+      color: var(--navbar-hover-color);
     }
 
-    .navbar-brand {
-        color: var(--navbar-brand-color);
-
-        &:hover {
-            color: var(--navbar-brand-hover-color);
-        }
+    &.active {
+      color: var(--navbar-active-color);
     }
 
-    .navbar-toggler {
-        border-color: var(--navbar-toggler-border-color);
-
-        .navbar-toggler-icon {
-            background-image: var(--navbar-toggler-icon-bg);
-        }
+    &.disabled {
+      color: var(--navbar-disabled-color);
     }
+  }
+
+  .navbar-brand {
+    color: var(--navbar-brand-color);
+
+    &:hover {
+      color: var(--navbar-brand-hover-color);
+    }
+  }
+
+  .navbar-toggler {
+    border-color: var(--navbar-toggler-border-color);
+
+    .navbar-toggler-icon {
+      background-image: var(--navbar-toggler-icon-bg);
+    }
+  }
+
+  .nav-buttons-group-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .nav-buttons {
+      background-color: var(--button-background);
+      color: var(--button-text);
+      border: 1px solid white;
+      padding: 0.5rem 0.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: darkgray;
+        text-decoration: none;
+      }
+    }
+
+    .icon-sun {
+      color: yellow;
+    }
+
+    .icon-moon {
+      color: darkblue;
+    }
+  }
 }

@@ -1,13 +1,18 @@
+// vite.config.js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "path";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "sass:math"; @import "bootstrap/scss/functions"; @import "bootstrap/scss/variables";`,
+        // globale SCSS-Daten, die VOR jeder Datei eingefügt werden
+        additionalData: `
+          @use "sass:math";
+        `,
+        includePaths: [path.resolve(__dirname, "node_modules")],
       },
     },
   },

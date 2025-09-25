@@ -1,4 +1,6 @@
 .footer {
   background-color: var(--header-background);
   color: var(--header-text);
+  border-radius: 8px 8px 0 0;
+  padding: 0.7rem;
 }/*# sourceMappingURL=Footer.style.css.map */

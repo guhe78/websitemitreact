@@ -1,32 +1,31 @@
 .carousel-control-prev,
 .carousel-control-next {
-    top: 0.4rem;
-    bottom: auto;
+  top: 0.4rem;
+  bottom: auto;
 }
 
 .carousel-indicators {
-    top: 1.5rem;
+  top: 1.5rem;
 }
 
 .about-card {
-    .card-header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        background-color: rgb(156, 156, 156);
-        color: var(--header-text);
-    }
+    background-color: rgb(156, 156, 156);
+    color: var(--header-text);
+  }
 
-    .card-body {
-        padding: 0;
-        background-color: var(--card-background);
-        color: var(--card-text);
-    }
+  .card-body {
+    padding: 0;
+    background-color: var(--card-background);
+    color: var(--card-text);
+  }
 
-    .card-text {
-        padding: 5rem;
-        text-align: center;
-
-    }
+  .card-text {
+    padding: 5rem;
+    text-align: center;
+  }
 }
