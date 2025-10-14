@@ -13,7 +13,8 @@ const app = express();
 const port = process.env.PORT;
 
 const corsOptions = {
-  origin: process.env.FRONTEND_URL,
+  origin: [process.env.FRONTEND_URL_LOCAL, process.env.FRONTEND_URL],
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
