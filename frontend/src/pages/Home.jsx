@@ -7,11 +7,13 @@ function Home() {
 
   return (
     <div className={isDark ? "dark" : "light"}>
-      <h1>Willkommen...</h1>
+      <h2>Willkommen...</h2>
       <div className="row">
         <div className="offset-md-1 col-md-10">
           <div className="h-100 p-5 border rounded-3 mt-5 home-card">
-            <h6 className="card-title mb-5">...auf meiner Portfolio-Seite</h6>
+            <p className="card-title mb-5 fs-5">
+              ...auf meiner Portfolio-Seite
+            </p>
             <p className="card-text">
               Mein Name ist Günter, und ich bin Fachinformatiker für
               Anwendungsentwicklung. Ich habe meine Ausbildung zum

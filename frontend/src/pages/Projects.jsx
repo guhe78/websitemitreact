@@ -43,6 +43,7 @@ function Projects() {
               title={project.name}
               text={project.description}
               linkName={project.url}
+              arialabeltext={`Link to ${project.name} GitHub repository`}
             />
           </div>
         ))}

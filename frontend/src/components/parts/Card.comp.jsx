@@ -2,7 +2,7 @@ import { LinkBtn } from "./LinkBtn.comp.jsx";
 import { useTheme } from "../../contexts/Theme.context.jsx";
 import "../styles/Cards.style.scss";
 
-function Card({ imgUrl, title, text, linkName }) {
+function Card({ imgUrl, title, text, linkName, arialabeltext }) {
   const { isDark } = useTheme();
 
   return (
@@ -26,6 +26,7 @@ function Card({ imgUrl, title, text, linkName }) {
             }
             className="custom-button"
             link={linkName}
+            arialabeltext={arialabeltext}
           />
         </div>
       </div>

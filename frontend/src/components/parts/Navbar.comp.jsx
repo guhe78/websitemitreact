@@ -37,17 +37,30 @@ export default function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="/">
+                  <a
+                    className="nav-link"
+                    aria-label="Link mainpage"
+                    aria-current="page"
+                    href="/"
+                  >
                     <FaHome /> Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/about">
+                  <a
+                    className="nav-link"
+                    aria-label="Link about me"
+                    href="/about"
+                  >
                     <FaUser /> Über mich
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/projects">
+                  <a
+                    className="nav-link"
+                    aria-label="Link projects"
+                    href="/projects"
+                  >
                     <FaProjectDiagram /> Projekte
                   </a>
                 </li>
@@ -55,11 +68,16 @@ export default function Navbar() {
             </div>
           </div>
           <div className="nav-buttons-group-right align-items-start">
-            <a className="nav-buttons" href="/contact">
+            <a
+              className="nav-buttons"
+              aria-label="Contact mail link"
+              href="/contact"
+            >
               <FiMail className="icon-mail" />
             </a>
             <a
               className="nav-buttons"
+              aria-label="Github Page link"
               href="https://github.com/guhe78/"
               target="_blank"
             >
@@ -74,6 +92,7 @@ export default function Navbar() {
                 )
               }
               className={`${isDark ? "light" : "dark"}`}
+              aria-label="Toggle Theme dark light button"
               toggleHandler={toggleTheme}
             />
           </div>

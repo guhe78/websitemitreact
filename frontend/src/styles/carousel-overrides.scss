@@ -1,0 +1,53 @@
+:root {
+  --carousel-ui-color: #1f2937; /* Light background → dark UI */
+}
+
+html[data-theme="dark"],
+body.dark-mode,
+.dark-mode {
+  --carousel-ui-color: #e5e7eb; /* Dark background → light UI */
+}
+
+/* Indicators */
+.carousel-indicators [data-bs-target] {
+  background-color: var(--carousel-ui-color);
+  opacity: 0.55;
+  width: 30px;
+  height: 4px;
+  margin: 1.5px;
+  border-radius: 0.375rem;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.carousel-indicators .active {
+  background-color: var(--carousel-ui-color);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Hover for accessibility */
+.carousel-indicators [data-bs-target]:hover,
+.carousel-indicators [data-bs-target]:focus {
+  opacity: 0.85;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Arrow icons with correct directions */
+.carousel-control-prev-icon {
+  color: var(--carousel-ui-color);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.6rem 1.6rem;
+  filter: none !important;
+}
+
+.carousel-control-next-icon {
+  color: var(--carousel-ui-color);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.6rem 1.6rem;
+  filter: none !important;
+}

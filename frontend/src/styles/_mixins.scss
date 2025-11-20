@@ -5,8 +5,10 @@
   --background-color: #{vars.$light-background};
   --text-color: #{vars.$light-text};
 
-  --card-background: #{vars.$light-card-background};
-  --card-text: #{vars.$light-card-text};
+  --card-body-background: #{vars.$light-card-body-background};
+  --card-body-text: #{vars.$light-card-body-text};
+  --card-header-background: #{vars.$light-card-header-background};
+  --card-header-text: #{vars.$light-card-header-text};
 
   --button-background: #{vars.$light-button-background};
   --button-hover-background: #{vars.$light-button-hover-background};
@@ -34,8 +36,10 @@
   --background-color: #{vars.$dark-background};
   --text-color: #{vars.$dark-text};
 
-  --card-background: #{vars.$dark-card-background};
-  --card-text: #{vars.$dark-card-text};
+  --card-body-background: #{vars.$dark-card-body-background};
+  --card-body-text: #{vars.$dark-card-body-text};
+  --card-header-background: #{vars.$dark-card-header-background};
+  --card-header-text: #{vars.$dark-card-header-text};
 
   --button-background: #{vars.$dark-button-background};
   --button-hover-background: #{vars.$dark-button-hover-background};

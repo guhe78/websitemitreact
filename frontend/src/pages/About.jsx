@@ -57,7 +57,7 @@ export default function About() {
             >
               <div className={`card about-card ${isDark ? "dark" : "light"}`}>
                 <div className="card-body">
-                  <h5 className="card-header">{about.title}</h5>
+                  <p className="card-header fs-4">{about.title}</p>
                   <div className="card-text">
                     {about.description}
                     <div className="ml-4 space-y-2">

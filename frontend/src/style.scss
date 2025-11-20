@@ -32,3 +32,27 @@ html,
   margin: 2rem 0;
   padding-bottom: 3rem;
 }
+
+.header-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header-title {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+  box-sizing: border-box;
+}

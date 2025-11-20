@@ -1,89 +1,97 @@
-$light-background: #9dfff9;
-$light-text: #2e2c2f;
+// =======================================
+// Base Colors
+// =======================================
 
-$dark-background: #2e2c2f;
-$dark-text: #9dfff9;
+// Light Mode
+$light-background: #f5f7fa;
+$light-text: #1f2937;
 
-//
+// Dark Mode
+$dark-background: #121417;
+$dark-text: #e5e7eb;
+
+// =======================================
 // Card
-//
-$light-card-background: #f3e8ee;
-$light-card-text: #475b63;
+// =======================================
+$light-card-body-background: #ffffff;
+$light-card-body-text: #2d3748;
+$light-card-header-background: #f7fafc;
+$light-card-header-text: #1f2937;
 
-$dark-card-background: #475b63;
-$dark-card-text: #f3e8ee;
+$dark-card-body-background: #1d2125;
+$dark-card-body-text: #e5e7eb;
+$dark-card-header-background: #2d3748;
+$dark-card-header-text: #ffffff;
 
-//
-// Button
-//
-$light-button-background: #475b63;
-$light-button-hover-background: #2e2c2f;
-$light-button-text: #9dfff9;
-$light-button-hover-text: darkgray;
+$light-button-background: #7c3aed;
+$light-button-hover-background: #6d28d9;
+$light-button-text: #ffffff;
+$light-button-hover-text: #f3f4f6;
 
-$dark-button-background: #9dfff9;
-$dark-button-hover-background: #2e2c2f;
-$dark-button-text: #475b63;
-$dark-button-hover-text: darkgray;
+$dark-button-background: #c084fc;
+$dark-button-hover-background: #a855f7;
+$dark-button-text: #121417;
+$dark-button-hover-text: #ffffff;
 
-//
+// =======================================
 // Header
-//
+// =======================================
 $light-header-background: #ffffff;
-$light-header-text: #000000;
+$light-header-text: #1f2937;
 
-$dark-header-background: #4e4747;
-$dark-header-text: #ffffff;
+$dark-header-background: #1a1d21;
+$dark-header-text: #e5e7eb;
 
-//
+// =======================================
 // Footer
-//
-$light-footer-background: #f1f1f1;
-$light-footer-text: #000000;
+// =======================================
+$light-footer-background: #e5e7eb;
+$light-footer-text: #1f2937;
 
-$dark-footer-background: #4e4747;
-$dark-footer-text: #ffffff;
+$dark-footer-background: #1a1d21;
+$dark-footer-text: #e5e7eb;
 
-//
+// =======================================
 // Navbar
-$navbar-light-color: rgba(0, 0, 0, 0.65);
-$navbar-light-background: #64f58d;
-$navbar-light-hover-color: #9dfff9;
-$navbar-light-active-color: rgba(0, 0, 0, 1);
+// =======================================
+$navbar-light-color: #1f2937;
+$navbar-light-background: #ede9fe; // dezentes Lila Light
+$navbar-light-hover-color: #6d28d9;
+$navbar-light-active-color: #4c1d95;
 $navbar-light-disabled-color: rgba(0, 0, 0, 0.3);
-$navbar-light-icon-color: rgba(33, 37, 41, 0.75);
-$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(33,37,41,0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-light-icon-color: #4b5563;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(75,85,99,0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 $navbar-light-toggler-border-color: rgba(0, 0, 0, 0.6);
 $navbar-light-brand-color: $navbar-light-active-color;
 $navbar-light-brand-hover-color: $navbar-light-active-color;
 
-$navbar-dark-color: rgba(255, 255, 255, 0.55);
-$navbar-dark-background: #4e4747;
-$navbar-dark-hover-color: #9dfff9;
+$navbar-dark-color: #e5e7eb;
+$navbar-dark-background: #1d2125;
+$navbar-dark-hover-color: #c084fc;
 $navbar-dark-active-color: #ffffff;
 $navbar-dark-disabled-color: rgba(255, 255, 255, 0.25);
-$navbar-dark-icon-color: $navbar-dark-color;
-$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255,255,255,0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-icon-color: #e5e7eb;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(229,231,235,0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 $navbar-dark-toggler-border-color: rgba(255, 255, 255, 0.6);
 $navbar-dark-brand-color: $navbar-dark-active-color;
 $navbar-dark-brand-hover-color: $navbar-dark-active-color;
 
-//
+// =======================================
 // Carousel
-//
+// =======================================
 $carousel-control-color: #ffffff;
 $carousel-control-width: 15%;
-$carousel-control-opacity: 0.5;
-$carousel-control-hover-opacity: 0.9;
+$carousel-control-opacity: 0.7;
+$carousel-control-hover-opacity: 1;
 $carousel-control-transition: opacity 0.15s ease;
-$carousel-control-icon-filter: null;
+$carousel-control-icon-filter: none;
 
 $carousel-indicator-width: 30px;
-$carousel-indicator-height: 3px;
+$carousel-indicator-height: 4px;
 $carousel-indicator-hit-area-height: 10px;
 $carousel-indicator-spacer: 3px;
-$carousel-indicator-opacity: 0.5;
-$carousel-indicator-active-bg: #474747;
+$carousel-indicator-opacity: 0.6;
+$carousel-indicator-active-bg: #7c3aed;
 $carousel-indicator-active-opacity: 1;
 $carousel-indicator-transition: opacity 0.6s ease;
 
@@ -94,8 +102,8 @@ $carousel-caption-spacer: 1.25rem;
 
 $carousel-control-icon-width: 2rem;
 
-$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#474747'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/></svg>");
-$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#474747'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/></svg>");
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#7c3aed'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/></svg>");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#7c3aed'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/></svg>");
 
 $carousel-transition-duration: 0.6s;
 $carousel-transition: transform $carousel-transition-duration ease-in-out;

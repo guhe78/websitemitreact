@@ -1,7 +1,12 @@
-export function LinkBtn({ title, className, link }) {
+export function LinkBtn({ title, className, link, arialabeltext }) {
   return (
     <>
-      <a className={className} href={link} target="_blank">
+      <a
+        className={className}
+        href={link}
+        aria-label={arialabeltext}
+        target="_blank"
+      >
         {title}
       </a>
     </>
