@@ -1,6 +1,8 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import Header from "./components/parts/Header.comp.jsx";
+import Footer from "./components/parts/Footer.comp.jsx";
 
 const Home = lazy(() => import("./pages/Home.jsx"));
 const About = lazy(() => import("./pages/About.jsx"));
@@ -8,8 +10,6 @@ const Projects = lazy(() => import("./pages/Projects.jsx"));
 const Contact = lazy(() => import("./pages/Contact.jsx"));
 const Impressum = lazy(() => import("./pages/Impressum.jsx"));
 const NoPage = lazy(() => import("./pages/NoPage.jsx"));
-const Header = lazy(() => import("./components/parts/Header.comp.jsx"));
-const Footer = lazy(() => import("./components/parts/Footer.comp.jsx"));
 
 function App() {
   return (

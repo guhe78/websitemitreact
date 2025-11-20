@@ -55,4 +55,15 @@ html,
   padding: 10px 0;
   margin: 0;
   box-sizing: border-box;
+  color: lightblue;
+}
+
+.loading-fallback {
+  background-color: var(--background-color); // Nimmt den korrekten Hintergrund
+  color: var(--text-color);
+  min-height: 70vh; // Oder die Höhe des .content containers
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 }

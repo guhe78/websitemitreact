@@ -1,6 +1,6 @@
+import { useTheme } from "../../contexts/Theme.context.jsx";
 import Navbar from "./Navbar.comp.jsx";
 import "../styles/Header.style.scss";
-import { useTheme } from "../../contexts/Theme.context.jsx";
 
 function Header() {
   const { isDark } = useTheme();

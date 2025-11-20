@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>klappstuhl.net</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <script>
+      (function() {
+        const savedMode = localStorage.getItem("isDark");
+        const isDark = savedMode ? JSON.parse(savedMode) : false;
+        document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+      })();
+    </script>
+    <style>
+      html {
+        background-color: #ffffff;
+      }
+      html[data-theme="dark"] {
+        background-color: #1a1a1a;
+      }
+      body {
+        margin: 0;
+        background-color: inherit;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
